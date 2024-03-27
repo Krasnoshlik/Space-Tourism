@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+$light-black: rgb(11, 13, 23) ;
+$light-grey: rgb(208, 214, 249);
+$light-white: rgb(255, 255, 255);
+$small-h: 28px;
+$massive-h: 150px;
+$normal-p: 18px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bellefair", serif;
+  font-size: 16px;
+  color: $light-white;
+}
+h2 {
+  font-size: $small-h;
+}
+p {
+  font-size: $normal-p;
+}
+
+.app-wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 250px;
+  height: 100vh;
+  background-image: url('./assets/home/background-home-desktop.jpg');
+  background-size: cover;
+  background-position: center;
+
+  // Start nav 
+  nav {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3%;
+    padding-right: 0;
+    svg{
+      transform: rotate(0.5turn);
+    }
+    .nav-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+        span {
+          display: block;
+          width: 400px;
+          margin-right: -20px;
+          height: 2px;
+          background-color: rgba(255, 255, 255, 0.189);
+          z-index: 1000;
+        }
+        .nav-links {
+          display: flex;
+          padding-left: 80px;
+          padding-top: 30px;
+          padding-right: 100px;
+          padding-bottom: 30px;
+          backdrop-filter: blur(50px);
+          gap: 48px;
+          button {
+            background-color: transparent;
+            border: none;
+            color: $light-white;
+            letter-spacing: 2px;
+          }
+          button:hover {
+            cursor: pointer;
+            text-shadow: 0 0 10px $light-grey;
+          }
+          .active {
+            color: rgb(205, 194, 133);
+            scale: 1.2;
+          }
+        }
+    }
+  }
+  // End nav 
+
+  // Home start
+  .home__wrapper {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .info__wrapper {
+      max-width: 440px;
+      h1{
+        font-size: $massive-h;
+      }
+    }
+    button {
+      color: $light-black;
+      font-size: $small-h;
+      width: 274px;
+      height: 274px;
+      background-color: $light-white;
+      border-radius: 50%;
+    }
+    .button__holder{
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      &:after{
+          position: absolute;
+          z-index: 0;
+          top: 0; right: 0; bottom: 0; left: 0;
+          background: rgba(#1a1a1a, 0.7);
+      }
+      }
+      .plus{
+        position: relative;
+        z-index: 1;
+        color: #1a1a1a;
+        background: #ffffff;
+        border-radius: 50%;
+        border: none;
+        transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 200ms cubic-bezier(.2,0,.7,1);
+        &:after{
+            font-size: 2.5em;
+            line-height: 1.1em;
+        }
+        &:hover{
+          cursor: pointer;
+            transform: rotate(360deg);
+            box-shadow: 0 0 1px 15px rgba(#ffffff, 0.4),
+            0 0 1px 30px rgba(#ffffff, 0.1),
+            0 0 1px 45px rgba(#ffffff, 0.1);
+        }
+    }
+  }
+  
+  // Home end
+  
+  } 
