@@ -1,10 +1,16 @@
 import { Home } from "./components/Home";
+import { Destination } from './components/Destination';
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
+import { Routes, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Crew } from "./components/Crew";
+import { Technology } from "./components/Technology";
 
 function App() {
+  const navigate = useNavigate();
   return (
     <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
       <div className="app-wrapper">
@@ -23,16 +29,20 @@ function App() {
             <div className="nav-wrapper">
               <span></span>
               <div className="nav-links">
-                <button>00 HOME</button>
-                <button>01 DESTINATION</button>
-                <button>02 CREW</button>
-                <button>03 TECHNOLOGY</button>
+                <button onClick={() => navigate('/', { replace: false })}>00 HOME</button>
+                <button onClick={() => navigate('/destination', { replace: false })}>01 DESTINATION</button>
+                <button onClick={() => navigate('/crew', { replace: false })}>02 CREW</button>
+                <button onClick={() => navigate('/technology', { replace: false })}>03 TECHNOLOGY</button>
               </div>
             </div>
           </nav>
           {/* End nav  */}
-
-          <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/destination" element={<Destination />} />
+        <Route path="/crew" element={<Crew/>} />
+        <Route path="/technology" element={<Technology/>} />
+      </Routes>
         </MouseParallaxChild>
       </div>
     </MouseParallaxContainer>
