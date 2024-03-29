@@ -4,15 +4,30 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Crew } from "./components/Crew";
 import { Technology } from "./components/Technology";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [background, setBackground] = useState('-home');
   const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(() => {
+    if(location.pathname === '/') {
+      setBackground('-home');
+    } else if(location.pathname === '/destination' || location.pathname === '/crew') {
+      setBackground('-crew');
+    } else if(location.pathname === '/technology') {
+      setBackground('-tech')
+    }
+  },[location])
+
   return (
     <MouseParallaxContainer globalFactorX={0.1} globalFactorY={0.1}>
+      <div className={"backgroundimage"+ background}>
       <div className="app-wrapper">
         <MouseParallaxChild factorX={0.3} factorY={0.5}>
           <nav>
@@ -44,6 +59,7 @@ function App() {
         <Route path="/technology" element={<Technology/>} />
       </Routes>
         </MouseParallaxChild>
+      </div>
       </div>
     </MouseParallaxContainer>
   );
