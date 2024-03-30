@@ -22,6 +22,7 @@ h2 {
 p {
   font-size: $normal-p;
 }
+
 .backgroundimage-home {
   background-image: url('./assets/home/background-home-desktop.jpg');
   background-size: cover;
@@ -542,7 +543,7 @@ p {
   
     // Home start
     .home__wrapper {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: auto;
       padding-top: 200px;
       display: flex;
@@ -551,171 +552,56 @@ p {
       .info__wrapper {
         max-width: 440px;
         h1{
-          font-size: $massive-h;
+          font-size: 100px;
+        h2 {
+          font-size: 40px;
         }
+        p {
+          font-size: 14px;
+        }
+      }
+
       }
       button {
         color: $light-black;
-        font-size: $small-h;
-        width: 274px;
-        height: 274px;
-        background-color: $light-white;
-        border-radius: 50%;
+        font-size: 18px;
+        width: 174px;
+        height: 174px;
       }
       .button__holder{
-        position: relative;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
         &:after{
-            position: absolute;
-            z-index: 0;
-            top: 0; right: 0; bottom: 0; left: 0;
-            background: rgba(#1a1a1a, 0.7);
         }
         }
         .plus{
-          position: relative;
-          z-index: 1;
-          color: #1a1a1a;
-          background: #ffffff;
-          border-radius: 50%;
-          border: none;
-          transition: box-shadow 400ms cubic-bezier(.2,0,.7,1), transform 800ms cubic-bezier(.2,0,.7,1);
           &:after{
-              font-size: 2.5em;
-              line-height: 1.1em;
           }
           &:hover{
             cursor: pointer;
-              transform: scale(1.2);
-              box-shadow: 0 0 1px 15px rgba(#ffffff, 0.4),
-              0 0 1px 30px rgba(#ffffff, 0.1),
-              0 0 1px 45px rgba(#ffffff, 0.1);
           }
       }}
     
     // Destination start
     .destination {
-      max-width: 1200px;
-      margin: auto;
-      padding-top: 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 64px;
+      padding: 80px 20px 0px;
+      gap: 34px;
       .destination__heading {
-        display: flex;
-        justify-content: left;
-        gap: 10px;
         span {
-          font-size: 28px;
-          color: #ffffff4d;
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 18px;
         }
       }
       .destination__wrapper {
-        display: flex;
-        justify-content: space-between;
+        .destination__img {
+          max-width: 100px;
+        }
         .destination__main-info {
           max-width: 390px;
-          // Copy here
-          nav {
-            padding: 5px 5px 0;
-          }
-          .tabs {
-            display: flex;
-            justify-content: flex-start;
-            flex-wrap: nowrap;
-            width: 100%;
-          }
-          
-          ul {
-            display: flex;
-            width: 100%;
-            align-items: left;
-          }
-          
-          li {
-            margin: auto;
-            padding: 10px 10px 10px;
-            position: relative;
-            cursor: pointer;
-            display: flex;
-            min-width: 0;
-            position: relative;
-            user-select: none;
-          }
-          
-          .underline {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 1px;
-          }
-          
-          li.selected {
-            border-bottom: 2px solid white;
-          }
-          
-          li button {
-            width: 20px;
-            height: 20px;
-            border: 0;
-            display: flex;
-            cursor: pointer;
-          }
-          
-          .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            width: 300px;
-          }
-          
-          .add-item {
-            width: 30px;
-            height: 30px;
-            background: #eee;
-            border-radius: 50%;
-            border: 0;
-            cursor: pointer;
-            align-self: center;
-          }
-          
-          .add-item:disabled {
-            opacity: 0.4;
-            cursor: default;
-            pointer-events: none;
-          }
-  
-          // Copy end
         .main-info__wrapper {
-          margin-top: 60px;
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-          h1{
-            font-size: 100px;
-          }
-          p {
-            font-size: $normal-p;
-            color: $light-grey;
-          }
           span {
             border: 1px solid $light-grey;
             border-color: rgba(255, 255, 255, 0.32);
-          }
-          .distant-wrapper {
-            display: flex;
-            gap: 40px;
-            h3 {
-            font-size: $normal-p;
-            color: $light-white;
-            font-weight: 300;
-            }
           }
         }
         }
@@ -723,19 +609,33 @@ p {
   
     // Crew start
     .crew {
-      padding-top: 80px;
-      gap: 34px;
+      padding: 80px 20px 0px;
+      gap: 24px;
       .crew__heading {
         gap: 10px;
         span {
           font-size: 18px;
         }
+        h2 {
+          font-size: 18px;
+        }
       }
       .crew__wrapper {
         gap: 10px;
+        .crew__img {
+          max-width: 20%;
+        }
         .crew__main-info {
+          padding: 0px 20px 0px;
+          position: absolute;
+          left: 0;
           nav {
+            position: relative;
             padding: 5px 5px 0;
+            z-index: 1000;
+          }
+          li {
+            font-size: 12px;
           }
           li button {
             width: 10px;
@@ -746,11 +646,11 @@ p {
             max-width: 550px;
             margin-top: 100px;
             h1 {
-              font-size: 40px;
+              font-size: 50px;
             }
             p{
               margin-top: 20px;
-              font-size: 10px;
+              font-size: 30px;
             }
           }
         }}
@@ -759,9 +659,9 @@ p {
       }
   
     .technology {
-        max-width: 1200px;
+        max-width: 1000px;
         margin: auto;
-        padding-top: 100px;
+        padding: 100px 20px 0px;
         display: flex;
         flex-direction: column;
         gap: 64px;
@@ -770,21 +670,19 @@ p {
           justify-content: left;
           gap: 10px;
           span {
-            font-size: 28px;
+            font-size: 18px;
             color: #ffffff4d;
+          }
+          h2 {
+            font-size: 18px;
           }
         }
         .technology__wrapper {
-          display: flex;
-          flex-direction: row-reverse;
-          justify-content: space-between;
-          gap: 20px;
-          .technology__img {
-            max-width: 400px;
-          }
           .technology__main-info {
             display: flex;
             gap: 20px;
+            position: absolute;
+            left: 0;
             nav {
               padding: 5px 5px 0;
             }
@@ -816,14 +714,6 @@ p {
               border: 2px solid ;
             }
             
-            .underline {
-              position: absolute;
-              bottom: -1px;
-              left: 0;
-              right: 0;
-              height: 1px;
-            }
-            
             li.selected {
               background-color: $light-white;
               color: black;
@@ -836,14 +726,6 @@ p {
               border: 2px solid;
               display: flex;
               cursor: pointer;
-            }
-            
-            .background {
-              position: absolute;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              width: 300px;
             }
             
             .add-item {
@@ -862,17 +744,270 @@ p {
               pointer-events: none;
             }
             .technology-main-info__wrapper {
-              max-width: 550px;
+              max-width: 450px;
               margin-top: 100px;
               h3{
                 color: $light-grey;
               }
               h1 {
-                font-size: 60px;
+                font-size: 50px;
               }
               p{
                 margin-top: 20px;
-                font-size: 20px;
+                font-size: 18px;
+              }
+            }
+          }}
+    
+        
+        }
+}
+
+@media (max-width:640px) {
+  .app-wrapper {
+    gap: 70px;
+    padding: 0px 20px 0px;
+    // Start nav 
+    nav {
+      .nav-wrapper {
+          span {
+            width: 6%;
+          }
+          .nav-links {
+            padding-left: 40px;
+            padding-top: 15px;
+            padding-right: 50px;
+            padding-bottom: 15px;
+            gap: 28px;
+            button {
+              font-size: 12px;
+            }
+            button:hover {
+              cursor: pointer;
+              text-shadow: 0 0 10px $light-grey;
+            }
+            .active {
+              color: rgb(205, 194, 133);
+              scale: 1.2;
+            }
+          }
+      }}
+    // End nav 
+  
+    // Home start
+    .home__wrapper {
+      max-width: 1000px;
+      margin: auto;
+      padding-top: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .info__wrapper {
+        max-width: 440px;
+        h1{
+          font-size: 100px;
+        h2 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      }
+      button {
+        color: $light-black;
+        font-size: 18px;
+        width: 174px;
+        height: 174px;
+      }
+      .button__holder{
+        &:after{
+        }
+        }
+        .plus{
+          &:after{
+          }
+          &:hover{
+            cursor: pointer;
+          }
+      }}
+    
+    // Destination start
+    .destination {
+      padding: 80px 20px 0px;
+      gap: 34px;
+      .destination__heading {
+        span {
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+      .destination__wrapper {
+        .destination__img {
+          max-width: 100px;
+        }
+        .destination__main-info {
+          max-width: 390px;
+        .main-info__wrapper {
+          span {
+            border: 1px solid $light-grey;
+            border-color: rgba(255, 255, 255, 0.32);
+          }
+        }
+        }
+      }}} 
+  
+    // Crew start
+    .crew {
+      padding: 80px 20px 0px;
+      gap: 24px;
+      .crew__heading {
+        gap: 10px;
+        span {
+          font-size: 18px;
+        }
+        h2 {
+          font-size: 18px;
+        }
+      }
+      .crew__wrapper {
+        gap: 10px;
+        .crew__img {
+          max-width: 20%;
+        }
+        .crew__main-info {
+          padding: 0px 20px 0px;
+          position: absolute;
+          left: 0;
+          nav {
+            position: relative;
+            padding: 5px 5px 0;
+            z-index: 1000;
+          }
+          li {
+            font-size: 12px;
+          }
+          li button {
+            width: 10px;
+            height: 10px;
+            font-size: 10px;
+          }
+          .crew-main-info__wrapper {
+            max-width: 550px;
+            margin-top: 100px;
+            h1 {
+              font-size: 50px;
+            }
+            p{
+              margin-top: 20px;
+              font-size: 30px;
+            }
+          }
+        }}
+  
+      
+      }
+  
+    .technology {
+        max-width: 1000px;
+        margin: auto;
+        padding: 100px 20px 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        .technology__heading {
+          display: flex;
+          justify-content: left;
+          gap: 10px;
+          span {
+            font-size: 18px;
+            color: #ffffff4d;
+          }
+          h2 {
+            font-size: 18px;
+          }
+        }
+        .technology__wrapper {
+          .technology__main-info {
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            left: 0;
+            nav {
+              padding: 5px 5px 0;
+            }
+            .tabs {
+              display: flex;
+              justify-content: flex-start;
+              flex-wrap: nowrap;
+              width: 100%;
+            }
+            
+            ul {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              align-items: left;
+              gap: 20px;
+            }
+            
+            li {
+              margin: auto;
+              padding: 5px 10px 5px;
+              position: relative;
+              display: flex;
+              min-width: 0;
+              position: relative;
+              user-select: none;
+              cursor: pointer;
+              border-radius: 50%;
+              border: 2px solid ;
+            }
+            
+            li.selected {
+              background-color: $light-white;
+              color: black;
+              border-color: $light-grey;
+            }
+            
+            li button {
+              width: 20px;
+              height: 20px;
+              border: 2px solid;
+              display: flex;
+              cursor: pointer;
+            }
+            
+            .add-item {
+              width: 30px;
+              height: 30px;
+              background: #eee;
+              border-radius: 50%;
+              border: 0;
+              cursor: pointer;
+              align-self: center;
+            }
+            
+            .add-item:disabled {
+              opacity: 0.4;
+              cursor: default;
+              pointer-events: none;
+            }
+            .technology-main-info__wrapper {
+              max-width: 450px;
+              margin-top: 100px;
+              h3{
+                color: $light-grey;
+              }
+              h1 {
+                font-size: 50px;
+              }
+              p{
+                margin-top: 20px;
+                font-size: 18px;
               }
             }
           }}
