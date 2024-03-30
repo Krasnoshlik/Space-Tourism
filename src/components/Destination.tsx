@@ -29,7 +29,7 @@ export const Destination = () => {
               transition={{ duration: 0.4 }}
             >
               <div className="destination__img">
-                <img src={selectedTab.img} alt="" />
+                <img src={selectedTab.img} width='100%'/>
               </div>
             </motion.div>
           </AnimatePresence>

@@ -7,7 +7,6 @@ $small-h: 28px;
 $massive-h: 150px;
 $normal-p: 18px;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -769,10 +768,11 @@ p {
     padding: 0px 20px 0px;
     // Start nav 
     nav {
+      display: none;
+      svg {
+          overflow: hidden;
+      }
       .nav-wrapper {
-          span {
-            width: 6%;
-          }
           .nav-links {
             padding-left: 40px;
             padding-top: 15px;
@@ -792,16 +792,16 @@ p {
             }
           }
       }}
-    // End nav 
-  
+    // End nav
     // Home start
     .home__wrapper {
-      max-width: 1000px;
       margin: auto;
       padding-top: 200px;
       display: flex;
       align-items: center;
+      flex-direction: column;
       justify-content: space-around;
+      gap: 200px;
       .info__wrapper {
         max-width: 440px;
         h1{
@@ -837,6 +837,7 @@ p {
     .destination {
       padding: 80px 20px 0px;
       gap: 34px;
+      align-items: center;
       .destination__heading {
         span {
           font-size: 18px;
@@ -846,19 +847,38 @@ p {
         }
       }
       .destination__wrapper {
+        flex-direction: column;
+        align-items: center;
         .destination__img {
-          max-width: 100px;
-        }
+          display: flex;
+          justify-content: center;
+          img {
+          width: 300px;
+          height: 300px;
+        }}
         .destination__main-info {
           max-width: 390px;
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 40px;
+          nav {
+            display: block;
+          }
         .main-info__wrapper {
+          align-items: center;
           span {
             border: 1px solid $light-grey;
             border-color: rgba(255, 255, 255, 0.32);
           }
+          p {
+            text-align: center;
+          }
+          .distant-wrapper {
+            text-align: center;
+          }
         }
         }
-      }}} 
+      }}}
   
     // Crew start
     .crew {
@@ -874,15 +894,19 @@ p {
         }
       }
       .crew__wrapper {
-        gap: 10px;
+        flex-direction: column;
         .crew__img {
           max-width: 20%;
         }
         .crew__main-info {
           padding: 0px 20px 0px;
-          position: absolute;
           left: 0;
+          display: flex;
+          flex-direction: column-reverse;
+          position: fixed;
+          bottom: -50px;
           nav {
+            display: block;
             position: relative;
             padding: 5px 5px 0;
             z-index: 1000;
@@ -897,20 +921,18 @@ p {
           }
           .crew-main-info__wrapper {
             max-width: 550px;
-            margin-top: 100px;
             h1 {
-              font-size: 50px;
+              font-size: 40px;
             }
             p{
               margin-top: 20px;
-              font-size: 30px;
+              font-size: 20px;
             }
           }
         }}
   
       
       }
-  
     .technology {
         max-width: 1000px;
         margin: auto;
@@ -1013,5 +1035,25 @@ p {
           }}
     
         
+      }
+    .mobile-nav {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(50px);
+      .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        button {
+          font-size: 14px;
+          padding: 6px;
+          background-color: transparent;
+          border: none;
         }
+      }
+      }
 }
