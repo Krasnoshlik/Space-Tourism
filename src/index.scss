@@ -593,9 +593,11 @@ p {
       }
       .destination__wrapper {
         .destination__img {
-          max-width: 100px;
+          max-width: 500px;
         }
         .destination__main-info {
+          position: absolute;
+          right: 0;
           max-width: 390px;
         .main-info__wrapper {
           span {
@@ -861,6 +863,7 @@ p {
           display: flex;
           flex-direction: column-reverse;
           gap: 40px;
+          position: inherit;
           nav {
             display: block;
           }
@@ -882,7 +885,7 @@ p {
   
     // Crew start
     .crew {
-      padding: 80px 20px 0px;
+      padding: 50px 10px 0px;
       gap: 24px;
       .crew__heading {
         gap: 10px;
@@ -896,23 +899,22 @@ p {
       .crew__wrapper {
         flex-direction: column;
         .crew__img {
-          max-width: 20%;
+          max-width: 300px;
         }
         .crew__main-info {
-          padding: 0px 20px 0px;
-          left: 0;
+          padding: 0px;
           display: flex;
           flex-direction: column-reverse;
-          position: fixed;
-          bottom: -50px;
+          position: absolute;
+          bottom: -60px;
           nav {
             display: block;
             position: relative;
-            padding: 5px 5px 0;
+            padding: 5px 0px 0px;
             z-index: 1000;
           }
           li {
-            font-size: 12px;
+            font-size: 10px;
           }
           li button {
             width: 10px;
@@ -922,11 +924,11 @@ p {
           .crew-main-info__wrapper {
             max-width: 550px;
             h1 {
-              font-size: 40px;
+              font-size: 30px;
             }
             p{
               margin-top: 20px;
-              font-size: 20px;
+              font-size: 18px;
             }
           }
         }}
@@ -936,10 +938,10 @@ p {
     .technology {
         max-width: 1000px;
         margin: auto;
-        padding: 100px 20px 0px;
+        padding: 50px 10px 0px;
         display: flex;
         flex-direction: column;
-        gap: 64px;
+        gap: 14px;
         .technology__heading {
           display: flex;
           justify-content: left;
@@ -953,12 +955,17 @@ p {
           }
         }
         .technology__wrapper {
+          flex-direction: column;
+          align-items: center;
+          .technology__img {
+            max-width: 300px;
+          }
           .technology__main-info {
             display: flex;
-            gap: 20px;
-            position: absolute;
-            left: 0;
+            flex-direction: column-reverse;
+            position: inherit;
             nav {
+              display: block;
               padding: 5px 5px 0;
             }
             .tabs {
@@ -970,7 +977,7 @@ p {
             
             ul {
               display: flex;
-              flex-direction: column;
+              flex-direction: row;
               width: 100%;
               align-items: left;
               gap: 20px;
@@ -1049,7 +1056,7 @@ p {
         justify-content: center;
         gap: 10px;
         button {
-          font-size: 14px;
+          font-size: 12px;
           padding: 6px;
           background-color: transparent;
           border: none;
