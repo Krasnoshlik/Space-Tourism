@@ -390,7 +390,7 @@ p {
   .technology {
       max-width: 1200px;
       margin: auto;
-      padding-top: 100px;
+      padding-top: 120px;
       display: flex;
       flex-direction: column;
       gap: 64px;
@@ -510,6 +510,9 @@ p {
       }
 
 @media (max-width:1270px) {
+  .mobile-nav {
+    display: none;
+  }
   .app-wrapper {
     gap: 70px;
     padding: 0px 20px 0px;
@@ -544,7 +547,7 @@ p {
     .home__wrapper {
       max-width: 1000px;
       margin: auto;
-      padding-top: 200px;
+      padding-top: 100px;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -581,7 +584,7 @@ p {
     
     // Destination start
     .destination {
-      padding: 80px 20px 0px;
+      padding: 50px 20px 0px;
       gap: 34px;
       .destination__heading {
         span {
@@ -610,7 +613,7 @@ p {
   
     // Crew start
     .crew {
-      padding: 80px 20px 0px;
+      padding: 50px 20px 0px;
       gap: 24px;
       .crew__heading {
         gap: 10px;
@@ -662,7 +665,7 @@ p {
     .technology {
         max-width: 1000px;
         margin: auto;
-        padding: 100px 20px 0px;
+        padding: 50px 20px 0px;
         display: flex;
         flex-direction: column;
         gap: 64px;
@@ -837,7 +840,7 @@ p {
     
     // Destination start
     .destination {
-      padding: 80px 20px 0px;
+      padding: 50px 20px 0px;
       gap: 34px;
       align-items: center;
       .destination__heading {
@@ -1044,6 +1047,7 @@ p {
         
       }
     .mobile-nav {
+      display: block;
       width: 100%;
       position: fixed;
       bottom: 0;
