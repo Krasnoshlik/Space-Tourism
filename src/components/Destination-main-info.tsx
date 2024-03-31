@@ -1,4 +1,5 @@
-export const DestinationMainInfo = ({selectedTab}) => {
+
+export const DestinationMainInfo = ({selectedTab}: any) => {
     return (
         <div className="main-info__wrapper">
             <h1>{selectedTab.label}</h1>

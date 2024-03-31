@@ -5,6 +5,7 @@ import { TechnologyMainInfo } from "./Technology-main-info.tsx";
 
 export const Technology = () => {
   const [selectedTab, setSelectedTab] = useState(TechnologyInfo[0]);
+  
   return (
     <>
     <AnimatePresence mode="wait">

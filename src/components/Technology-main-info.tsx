@@ -1,4 +1,5 @@
-export const TechnologyMainInfo = ({selectedTab}) => {
+
+export const TechnologyMainInfo = ({selectedTab}: any) => {
     return (
         <div className="technology-main-info__wrapper">
             <h3>THE TERMINOLOGY…</h3>
